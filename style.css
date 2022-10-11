@@ -1,0 +1,108 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(rgba(7, 7, 7, 0.655),rgba(63, 62, 62, 0.584)), url("img/font.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container{    
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: column;
+    margin: auto;
+}
+
+.citation{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60%;
+    margin: auto;
+    color: lightcyan;
+    transition: 1s;
+}
+.phrase{
+    font-family: 'Satisfy', cursive;
+    font-size: 35px;
+    transition: 1s;
+}
+
+.auteur{
+    font-family: 'Tangerine', cursive;
+    font-size: 35px;
+    margin-top: 0;
+    transition: 1s;
+}
+.button{
+    background-color: rgba(211, 211, 211, 0.241);    
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    margin-top: 20px;
+    padding:10px 20px;
+    border-radius : 5px; 
+    transition: 0,5s;   
+}
+.button:hover{
+    background-color: rgba(211, 211, 211, 0.299); 
+}
+.fa-arrows-rotate{
+    font-size: 30px;
+    color: white;
+}
+
+.hide{
+    display:none;
+}  
+.fade-in{
+animation: 1.5s fadeIn;
+}
+.fade-out{
+animation: 1.5s fadeOut;
+}
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+@keyframes fadeOut{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .phrase{
+        font-size: 25px;        
+    }
+    
+    .auteur{        
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 350px){
+    .phrase{
+        font-size: 20px;        
+    }
+    
+    .auteur{        
+        font-size: 20px;
+    }
+}
